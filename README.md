@@ -8,6 +8,6 @@ Divided into 3 Parts :
  
  ## 2.LeetCode (https://leetcode.com)
  
- ## 3.Codeforces (codeforces.com)
+ ## 3.Codeforces (http://codeforces.com)
  
  ## 4.vjudge.net 

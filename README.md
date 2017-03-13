@@ -6,8 +6,8 @@ Divided into 3 Parts :
 
  ## 1.牛客网 (www.nowcoder.com)  
  
- ## 2.LeetCode  
+ ## 2.LeetCode (https://leetcode.com)
  
- ## 3.Codeforces  
+ ## 3.Codeforces (codeforces.com)
  
- ## 4.vjudge.net
+ ## 4.vjudge.net 

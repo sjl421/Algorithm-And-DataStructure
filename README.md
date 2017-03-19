@@ -2,7 +2,7 @@
 
 Recording Personal life's Coding in Algorithm , Data Structure , etc about Programming. 
 
-Divided into 3 Parts :   
+Divided into 5 Parts :   
 
  ## 1.NowCoder (www.nowcoder.com)  
  

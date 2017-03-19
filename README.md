@@ -10,6 +10,6 @@ Divided into 3 Parts :
  
  ## 3.Codeforces (http://codeforces.com)
  
- ## 4.vjudge.net (http://vjudge.net) ---a great online judge Web in China
+ ## 4.vjudge.net (http://vjudge.net) 
  
  ## 5.LintCode (http://www.lintcode.com)

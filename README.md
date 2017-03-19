@@ -1,13 +1,15 @@
 #Code_Practice
 
-Recording life's Coding in Algorithm , Data Structure , etc about Programming. 
+Recording Personal life's Coding in Algorithm , Data Structure , etc about Programming. 
 
 Divided into 3 Parts :   
 
- ## 1.牛客网 (www.nowcoder.com)  
+ ## 1.NowCoder (www.nowcoder.com)  
  
  ## 2.LeetCode (https://leetcode.com)
  
  ## 3.Codeforces (http://codeforces.com)
  
- ## 4.vjudge.net 
+ ## 4.vjudge.net (http://vjudge.net) ---a great online judge Web in China
+ 
+ ## 5.LintCode (http://www.lintcode.com)

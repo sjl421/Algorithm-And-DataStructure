@@ -1,3 +1,8 @@
+/**
+ * URL:http://www.lintcode.com/en/problem/sort-integers/
+ * Question:
+ * Given an integer array, sort it in ascending order. Use selection sort, bubble sort, insertion sort or any O(n2) algorithm.
+ */
 public class Solution {
     /**
      * @param A an integer array
@@ -17,3 +22,7 @@ public class Solution {
         }
     }
 }
+/**
+ * 
+ *
+ */

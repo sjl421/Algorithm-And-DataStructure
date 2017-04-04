@@ -2,6 +2,8 @@
 
 Recording Personal life's Coding in Algorithm , Data Structure , etc about Programming. 
 
+Solve Interview Programming Problems in China  
+
 Divided into these Parts :   
 
  ## 1.NowCoder (www.nowcoder.com)  

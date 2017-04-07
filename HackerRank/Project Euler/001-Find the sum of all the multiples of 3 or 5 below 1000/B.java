@@ -9,17 +9,15 @@ public class Solution {
     PrintWriter out;
     final long MAX = (int) 1e9 + 7;
 
-    // public void solve() {
-    // long sum = 0;
-    //     for (int i = 1; i < 1000; i++) {
-    //         if (i % 3 == 0 || i % 5 == 0)
-    //             sum += i;
-    //     }
-    //     out.print(sum);
-    // }
-    public void solve(){
-
+    public void solve() {
+    long sum = 0;
+        for (int i = 1; i < 1000; i++) {
+            if (i % 3 == 0 || i % 5 == 0)
+                sum += i;
+        }
+        out.print(sum);
     }
+    
     /**
      * @param a
      * @param b

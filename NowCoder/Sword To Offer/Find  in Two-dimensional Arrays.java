@@ -5,7 +5,7 @@
  
  public class Solution {
     public boolean Find(int target, int [][] array) {
-int m=array[0].length;//矩阵的列数
+                int m=array[0].length;//矩阵的列数
 		int n=array.length;//矩阵的行数
 		int i=m-1,j=0;
 		while(i>=0&&j<=n-1){

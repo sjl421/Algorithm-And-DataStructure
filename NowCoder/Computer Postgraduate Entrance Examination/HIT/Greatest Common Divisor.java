@@ -14,6 +14,26 @@
 输出例子:
 7
 **/
+Java Code:
+import java.util.Scanner;
+
+public class Main {
+	private static long gcd(long a, long b) {
+
+		return b == 0 ? a : gcd(b, a % b);
+	}
+
+	public static void main(String[] args) {
+		Scanner in = new Scanner(System.in);
+		long a, b;
+		while (in.hasNext()) {
+          a=in.nextLong();
+          b=in.nextLong();
+			System.out.println(gcd(a, b));
+		}
+	}
+}
+C++ Code:
 //#include<bits/stdc++.h>
 #include<cstdio>
 #include<algorithm>

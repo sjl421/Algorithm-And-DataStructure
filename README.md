@@ -6,7 +6,7 @@ Solve Interview Programming Problems in China
 
 Divided into these Parts :   
 
- ## 1.HackeRank (https:www.hackerrank.com)
+ ## 1.HackerRank (https://www.hackerrank.com)
  
  ## 2.LeetCode (https://leetcode.com)
  

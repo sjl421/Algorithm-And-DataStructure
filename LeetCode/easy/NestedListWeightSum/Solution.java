@@ -1,14 +1,5 @@
-package com.zhangyong.algorithm;
-
 import java.util.List;
-import java.util.Random;
-import java.util.Scanner;
 
-/**
- * @author zhangyong
- * @email littledream1502@gmail.com
- * @date 2017/8/12
- */
 public class Solution {
 
     interface NestedInteger {

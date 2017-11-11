@@ -18,4 +18,4 @@ Divided into these Parts :  
 
  ## 6.PAT (https://www.patest.cn)
  
-And if you want to learn the Algoriths and Data Structure systematically , you can follow HackerRank Series to get it.
+And if you want to learn the Algorithms and Data Structure systematically , you can follow HackerRank Series to get it.

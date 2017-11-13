@@ -12,7 +12,9 @@ public class Solution {
 
     public int depthSum(List<NestedInteger> nestedList) {
         int res = 0;
-        if (nestedList == null || nestedList.size() == 0) return res;
+        if (nestedList == null || nestedList.size() == 0) {
+        	return res;
+        }
         return 0;
     }
 

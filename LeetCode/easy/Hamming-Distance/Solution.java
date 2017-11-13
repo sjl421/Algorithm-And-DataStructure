@@ -1,7 +1,4 @@
-package com.leetcode.easy.HammingDistance;
-
 import java.util.Scanner;
-
 /**
  * @author zhangyong@shopin.cn
  * @date 2017/11/7

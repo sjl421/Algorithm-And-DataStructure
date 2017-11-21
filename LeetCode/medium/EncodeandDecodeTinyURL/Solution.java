@@ -21,7 +21,7 @@ public class Solution {
         String str = (String) list.get(new Integer(shortUrl));
         return str;
     }
-
+    /*
     public static void main(String[] args) {
         Scanner in = new Scanner(System.in);
         String longUrl = in.nextLine();
@@ -30,5 +30,5 @@ public class Solution {
         longUrl = solution.decode(shortUrl);
         System.out.println(shortUrl);
         System.out.println(longUrl);
-    }
+    }*/
 }

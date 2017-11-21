@@ -32,8 +32,7 @@ public class Solution {
         ArrayList<Integer> list = new ArrayList<>();
         for (int i = left; i <= right; i++) {
             String str = i + "";
-            int[] arr = new int[str.length()];
-            boolean flag = judge(i, arr.length);
+            boolean flag = judge(i, str.length());
             if (flag == true) list.add(i);
         }
         return list;

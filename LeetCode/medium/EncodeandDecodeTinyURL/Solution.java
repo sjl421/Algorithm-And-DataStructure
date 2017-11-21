@@ -1,5 +1,3 @@
-package com.leetcode.medium.EncodeandDecodeTinyURL;
-
 import java.util.ArrayList;
 import java.util.Scanner;
 

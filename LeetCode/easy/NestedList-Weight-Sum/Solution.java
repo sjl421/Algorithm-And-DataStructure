@@ -19,8 +19,8 @@ public class Solution {
     }
     /**
     * 根据接口提供的方法,IsInteger()来判断list集合中是否是一个int类型的数据或者还是一个内含list;
-    * 如果遇到的事int类型数据,根据int类型数据所在的深度计算其val;
-    * 如果遇到的事list集合,则递归遍历其内容;
+    * 如果遇到的是int类型数据,根据int类型数据所在的深度计算其val;
+    * 如果遇到的是list集合,则递归遍历其内容;
     */
     public int getValueFormDepth(List<NestedInteger> list, int depth) {
         int res = 0;

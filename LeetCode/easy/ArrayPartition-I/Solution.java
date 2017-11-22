@@ -1,7 +1,4 @@
-package com.leetcode.easy.ArrayPartitionI;
-
 import java.util.Arrays;
-
 /**
  * @author zhangyong@shopin.cn
  * @date 2017/11/7

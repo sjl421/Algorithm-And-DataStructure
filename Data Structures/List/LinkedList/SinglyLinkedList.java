@@ -1,7 +1,5 @@
 package com.DataStructures.List.LinkedList;
 
-import net.egork.chelper.tester.TestCase;
-
 /**
  * @author littledream1502@gmail.com
  * @date 2017/11/26
@@ -73,13 +71,30 @@ public class SinglyLinkedList {
 
     /**
      * 删除指定位置上的节点元素;
+     *
      * @param index
+     * @example 1->2->3->4
+     * index=2
+     * ---------
+     * 1->3->4
      */
     public static void deleteByIndex(int index) {
         if (index < 0 || index > getNodeCount()) {
             return;
         }
-
+        NodeForSinglyLinkedList now = head;
+        if (index == 1) {
+            head = head.next;
+            return;
+        }
+        for (int i = 0; i < index - 2; i++) {
+            now = now.next;
+        }
+        if (now == null || now.next == null) {
+            return;
+        }
+        NodeForSinglyLinkedList last = now.next.next;
+        now.next = last;
     }
 
     /**
@@ -144,10 +159,9 @@ public class SinglyLinkedList {
         SinglyLinkedList list = new SinglyLinkedList();
         list.rpush(1);
         list.rpush(2);
+        list.rpush(3);
         list.rpush(4);
-        insertAfterIndex(2, 3);
-        rpop();
-        lpop();
+        deleteByIndex(2);
         printList();
         System.out.println(list.getNodeCount());
     }

@@ -24,4 +24,12 @@ public class NodeForSinglyLinkedList {
         this.val = val;
         this.next = null;
     }
+
+    @Override
+    public String toString() {
+        return "节点:{"+
+                "val=" + val +
+                ", next=" + next +
+                '}';
+    }
 }

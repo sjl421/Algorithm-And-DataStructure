@@ -3,7 +3,7 @@ package com.DataStructures.List.LinkedList;
 /**
  * @author littledream1502@gmail.com
  * @date 2017/11/26
- * @desc
+ * @desc 单向链表;
  */
 public class SinglyLinkedList {
 
@@ -19,7 +19,7 @@ public class SinglyLinkedList {
      * @desc add a new node at the front the linkedlist;
      * @complexity:O(1)
      */
-    public void lpush(int data) {
+    public static void lpush(int data) {
         NodeForSinglyLinkedList node = new NodeForSinglyLinkedList(data);
         node.next = head;
         head = node;
@@ -32,7 +32,7 @@ public class SinglyLinkedList {
      * @desc add a new node at the end of linkedlist;
      * @complexity: O(n)
      */
-    public void rpush(int data) {
+    public static void rpush(int data) {
         /**
          * 构建新节点;
          */
@@ -64,9 +64,37 @@ public class SinglyLinkedList {
 
     /**
      * @desc 链表左端取出一个节点, 并删除;
+     * @after wait to gc the pre node been deleted;
      */
     public static void lpop() {
         head = head.next;
+    }
+
+    /**
+     * 根据下标获取节点值;
+     *
+     * @param index
+     * @return
+     * @desc 下标从1开始
+     */
+    public static int getValueFromIndex(int index) {
+        if (index < 1) {
+            return getValueFromIndex(1);
+        }
+        if (index > getNodeCount()) {
+            return getValueFromIndex(getNodeCount());
+        }
+        NodeForSinglyLinkedList current = head;
+        int count = 1;
+        for (int i = 1; i < index + 1; i++) {
+            if (count == index) {
+                return current.val;
+            } else {
+                count += 1;
+                current = current.next;
+            }
+        }
+        return 0;
     }
 
     /**
@@ -106,10 +134,9 @@ public class SinglyLinkedList {
      */
     public static void insertAfterIndex(int index, int data) {
 
-        if (index <= 0 || head == null) {
+        if (index < 1 || head == null || index > getNodeCount()) {
             return;
         }
-
         //0->1->2->4
         NodeForSinglyLinkedList node = new NodeForSinglyLinkedList(data);
         NodeForSinglyLinkedList now = head;
@@ -141,12 +168,59 @@ public class SinglyLinkedList {
     }
 
     /**
+     * 根据节点位置交换位置
+     * 1->5->3->2
+     * ---------
+     * 第二个和第四个换位置
+     * ---------
+     * 1->2->3->5
+     *
+     * @param x
+     * @param y
+     */
+    public static void swapNodesFromIndex(int x, int y) {
+
+        if (x == y) {
+            return;
+        } else if (x < 1 || y > getNodeCount()) {
+            return;
+        }
+        if (x == 1) {
+            int val = head.val;
+            deleteByIndex(1);
+            lpush(getValueFromIndex(y - 1));
+            deleteByIndex(y);
+            insertAfterIndex(y - 1, val);
+        } else {
+            int val = getValueFromIndex(x);
+            deleteByIndex(x);
+            insertAfterIndex(x - 1, getValueFromIndex(y - 1));
+            deleteByIndex(y);
+            insertAfterIndex(y - 1, val);
+        }
+    }
+
+    /**
+     * 根据val值交换节点
+     *
+     * @param x
+     * @param y
+     * @desc
+     */
+    public void swapNodesFromValue(int x, int y) {
+
+    }
+
+
+    /**
      * 获取链表节点数量
      *
      * @return
      */
     public static int getNodeCount() {
+
         NodeForSinglyLinkedList tmp = head;
+
         int count = 0;
         while (tmp != null) {
             count += 1;
@@ -155,14 +229,25 @@ public class SinglyLinkedList {
         return count;
     }
 
+    /**
+     * @param args
+     */
     public static void main(String[] args) {
         SinglyLinkedList list = new SinglyLinkedList();
         list.rpush(1);
         list.rpush(2);
         list.rpush(3);
         list.rpush(4);
-        deleteByIndex(2);
+        list.rpush(5);
+        list.rpush(6);
+        list.rpush(7);
+        list.rpush(8);
+/*      deleteByIndex(1);
+        insertAfterIndex(1, 3);
+        deleteByIndex(3);
+        insertAfterIndex(2, 1);*/
+        swapNodesFromIndex(2, 3);
         printList();
-        System.out.println(list.getNodeCount());
+        System.out.println("链表个数为:" + list.getNodeCount());
     }
 }

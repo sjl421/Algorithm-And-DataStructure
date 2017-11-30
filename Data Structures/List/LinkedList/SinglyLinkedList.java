@@ -1,5 +1,9 @@
 package com.DataStructures.List.LinkedList;
 
+import jdk.nashorn.internal.objects.annotations.Getter;
+
+import javax.xml.soap.Node;
+
 /**
  * @author littledream1502@gmail.com
  * @date 2017/11/26
@@ -10,7 +14,7 @@ public class SinglyLinkedList {
     /**
      * 头结点;
      */
-    static NodeForSinglyLinkedList head;
+    static NodeForSinglyLinkedList head = null;
 
     /**
      * 左增节点，将新增的节点标记为头结点;
@@ -102,6 +106,7 @@ public class SinglyLinkedList {
      *
      * @param index
      * @example 1->2->3->4
+     * @desc 下标从1开始;
      * index=2
      * ---------
      * 1->3->4
@@ -152,7 +157,7 @@ public class SinglyLinkedList {
     /**
      * @desc 按链表顺序打印链表元素;
      */
-    public static void printList() {
+    public static void printList(NodeForSinglyLinkedList head) {
         NodeForSinglyLinkedList node = head;
         while (node != null) {
             System.out.println(node.val + " ");
@@ -161,10 +166,52 @@ public class SinglyLinkedList {
     }
 
     /**
-     * @desc 反向打印链表元素;
+     * @desc 将链表翻转;
+     * @main 改变指向;
+     * @understanding 我们把node.next理解为节点前后关系的改变;
+     * 而node[1]=node[2] 理解为node节点位置的改变;
+     *
+     *
+     * -----------------------------------------[I]
+               1----->3----->2------>4
+               ^      ^
+            current  next
+      -------------------------------------------[II]
+     null<-----1      3----->2------>4
+      ^        ^      ^
+     pre    current  next
+    -----------------------------------------[II]
+    null<-----1      3----->2------>4
+    ^        ^      ^
+    pre    current  next
      */
-    public static void reversePrintList() {
+    public static NodeForSinglyLinkedList reverseLinkedList(NodeForSinglyLinkedList head) {
+        NodeForSinglyLinkedList pre = null;
+        NodeForSinglyLinkedList current = head;
+        NodeForSinglyLinkedList next = null;
+        while (current != null) {
 
+            /**
+             *  保证链表后续元素不丢失;
+             *  如过程[I]所示;
+             */
+            next = current.next;
+            /**
+             * 逐一改变链表之间指向关系;
+             *  如过程[II]所示;
+             */
+            current.next = pre;
+            /**
+             * 如过程[III]所示;
+             */
+            pre = current;
+            /**
+             * 如过程[IV]所示;
+             */
+            current = next;
+        }
+        head = pre;
+        return head;
     }
 
     /**
@@ -200,17 +247,6 @@ public class SinglyLinkedList {
         }
     }
 
-    /**
-     * 根据val值交换节点
-     *
-     * @param x
-     * @param y
-     * @desc
-     */
-    public void swapNodesFromValue(int x, int y) {
-
-    }
-
 
     /**
      * 获取链表节点数量
@@ -242,12 +278,12 @@ public class SinglyLinkedList {
         list.rpush(6);
         list.rpush(7);
         list.rpush(8);
-/*      deleteByIndex(1);
+        /* deleteByIndex(1);
         insertAfterIndex(1, 3);
         deleteByIndex(3);
         insertAfterIndex(2, 1);*/
-        swapNodesFromIndex(2, 3);
-        printList();
+        //swapNodesFromIndex(2, 3);
+        printList(reverseLinkedList(head));
         System.out.println("链表个数为:" + list.getNodeCount());
     }
 }

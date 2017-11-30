@@ -1,2 +1,3 @@
- ### Code_Practice
-Recording Personal life's Coding in Algorithm , Data Structure , etc about Programming. 
+## Programming in Java
+### Recording Personal life's Coding in Algorithms , Data Structures , etc about programming.
+    

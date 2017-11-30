@@ -7,9 +7,17 @@
      if(left > right) return ;
      int i=left,int j=right,key=arr[left];
      while(i < j){
-        while(i < j && arr[key])
+        while(i < j && key < arr[j]){
+         j--;
+        }
+        arr[j]=arr[i];
+        while(i < j && key >= arr[i]){
+         i++;
+        }
+        arr[i]=arr[j];
      }
+     key=arr[i];
+     QuickSort(arr , left, i-1);
+     QuickSort(arr, i+1, right);
    }
 ```
-   
-  

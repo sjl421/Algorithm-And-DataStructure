@@ -182,7 +182,7 @@ public class SinglyLinkedList {
      pre    current  next
     -----------------------------------------[II]
     null<-----1      3----->2------>4
-    ^        ^      ^
+     ^        ^      ^
     pre    current  next
      */
     public static NodeForSinglyLinkedList reverseLinkedList(NodeForSinglyLinkedList head) {

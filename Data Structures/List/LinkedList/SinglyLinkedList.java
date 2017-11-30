@@ -180,10 +180,16 @@ public class SinglyLinkedList {
      null<-----1      3----->2------>4
       ^        ^      ^
      pre    current  next
-    -----------------------------------------[II]
+    -----------------------------------------[III]
     null<-----1      3----->2------>4
-     ^        ^      ^
-    pre    current  next
+              ^      ^
+             pre  current
+                     ^
+                    next
+    -----------------------------------------[IV]
+    null<-----1      3----->2------>4
+              ^      ^      ^
+             pre  current  next
      */
     public static NodeForSinglyLinkedList reverseLinkedList(NodeForSinglyLinkedList head) {
         NodeForSinglyLinkedList pre = null;
@@ -206,9 +212,12 @@ public class SinglyLinkedList {
              */
             pre = current;
             /**
-             * 如过程[IV]所示;
+             * 如过程[III]所示;
              */
             current = next;
+            /**
+             * 过程[IV] 则表示上述过程轮询;
+             */
         }
         head = pre;
         return head;

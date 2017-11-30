@@ -1,9 +1,5 @@
 package com.DataStructures.List.LinkedList;
 
-import jdk.nashorn.internal.objects.annotations.Getter;
-
-import javax.xml.soap.Node;
-
 /**
  * @author littledream1502@gmail.com
  * @date 2017/11/26

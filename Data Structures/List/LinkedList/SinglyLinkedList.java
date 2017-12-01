@@ -1,4 +1,4 @@
-package com.DataStructures.List.LinkedList;
+﻿package com.DataStructures.List.LinkedList;
 
 /**
  * @author littledream1502@gmail.com
@@ -169,23 +169,43 @@ public class SinglyLinkedList {
      *
      *
      * -----------------------------------------[I]
-               1----->3----->2------>4
+               1----->3----->2----->4
                ^      ^
             current  next
       -------------------------------------------[II]
-     null<-----1      3----->2------>4
+     null<-----1      3----->2----->4
       ^        ^      ^
      pre    current  next
     -----------------------------------------[III]
-    null<-----1      3----->2------>4
+    null<-----1      3----->2----->4
               ^      ^
              pre  current
                      ^
                     next
     -----------------------------------------[IV]
-    null<-----1      3----->2------>4
+    null<-----1      3----->2----->4
               ^      ^      ^
              pre  current  next
+    -----------------------------------------[IV]
+    null<-----1<-----3      2----->4
+              ^      ^      ^
+             pre  current  next     
+    -----------------------------------------[V]
+    null<-----1<-----3      2----->4
+              ^      ^      ^
+             pre  current  next    
+    -----------------------------------------[VI]
+    null<-----1<-----3      2----->4
+                     ^      ^      ^
+                    pre  current
+                            ^  
+                           next
+    -----------------------------------------[VII]
+    null<-----1<-----3      2----->4
+                     ^      ^      ^
+                    pre  current  next
+                            
+                       
      */
     public static NodeForSinglyLinkedList reverseLinkedList(NodeForSinglyLinkedList head) {
         NodeForSinglyLinkedList pre = null;

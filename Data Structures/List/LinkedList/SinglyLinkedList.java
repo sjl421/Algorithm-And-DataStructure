@@ -238,6 +238,40 @@ public class SinglyLinkedList {
         head = pre;
         return head;
     }
+    
+     /**
+     * 判断一个链表是否存在环;
+     *
+     * @param head
+     * @return
+     * @desc 定义2个指针以不同速度轮询链表, 如果出现了指针相遇的情况, 说明存在环;
+     */
+    public static boolean detectLoop(NodeForSinglyLinkedList head) {
+
+        NodeForSinglyLinkedList first = head, slow = head;
+
+        while (first != null && first.next != null) {
+            first = first.next.next;
+            slow = slow.next;
+            if (first == slow) return true;
+        }
+        return false;
+    }
+
+    /**
+     * 若一个链表有环,计算环的长度;
+     *
+     * @param head
+     * @return
+     * @desc --------------------------------------------------------------------------------
+     */
+    public static int getLoopLength(NodeForSinglyLinkedList head) {
+
+        NodeForSinglyLinkedList first = head, slow = head;
+
+        return 0;
+    }
+
 
     /**
      * 根据节点位置交换位置

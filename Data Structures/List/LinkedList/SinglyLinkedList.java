@@ -258,18 +258,25 @@ public class SinglyLinkedList {
         return false;
     }
 
-    /**
+     /**
      * 若一个链表有环,计算环的长度;
-     *
+     * 知识链接: https://www.cnblogs.com/fankongkong/p/7007869.html
      * @param head
      * @return
      * @desc --------------------------------------------------------------------------------
      */
     public static int getLoopLength(NodeForSinglyLinkedList head) {
-
+        int count = 0;
         NodeForSinglyLinkedList first = head, slow = head;
-
-        return 0;
+        while (first != null && first.next != null) {
+            first = first.next.next;
+            slow = slow.next;
+            count += 1;
+            if (first == slow) {
+                return count;
+            }
+        }
+        return count;
     }
 
 

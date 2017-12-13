@@ -1,5 +1,6 @@
 ## Programming in Java
 ### Recording Personal life's Coding in Algorithms , Data Structures , etc about programming.
+$$\sum\nolimits_{k=1}^n$$
 ``` C++
    #include<bits/stdc++.h>
    using namespace std;

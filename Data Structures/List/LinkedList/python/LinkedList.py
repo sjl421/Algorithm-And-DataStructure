@@ -1,21 +1,32 @@
-import Node;
+from Node import *;
+
+
 class LinkedList:
-    def __index__(self):
+    def __init__(self):
         self.head = None
 
-    def getCount(self):
-        temp = self.head
-        count = 0
-        while (temp):
-            count += 1
-            temp = temp.next
-        return count
+    def push(self,new_data):
+
+        new_data=Node(new_data)
+
+        new_data.next=self.head
+
+        self.head=new_data
+
+    def printList(self):
+
+        temp=self.head
+        while(temp):
+            print temp.data
+            temp=temp.next
+
 
 if __name__ == '__main__':
-    list=LinkedList()
-    list.head=Node(1)
-    second=Node(2)
-    third=Node(3)
-    list.head.next=second
-    second.next=third
-    print third.data
+
+    llist = LinkedList()
+
+    llist.push(6)
+
+    llist.push(7)
+
+    llist.printList()

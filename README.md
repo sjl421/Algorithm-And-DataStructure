@@ -1,6 +1,6 @@
-## Programming in Java
-### Recording Personal life's Coding in Algorithms , Data Structures , etc about programming.
-
+# Programming in Java
+## Recording Personal life's Coding in Algorithms , Data Structures , etc about programming.
+### This is My First Efficient Algorithm i get by study on mine own.
 ``` C++
    #include<bits/stdc++.h>
    using namespace std;
@@ -38,3 +38,6 @@
        }
    }
 ```
+# Description
+## this project will be updated in almost three programming language ,they are Java ,C++ and Python;
+## it's goal is to teach more and more people liking programming to learn DS and Algorithms, because of it is so important for us;

@@ -1,18 +1,36 @@
 #include<bits\stdc++.h>
 using namespace std;
+
 typedef long long ll;
 
+struct Node
+{
+    int val;
+    Node* next;
+    Node(int val){
+        this->val=val;
+        this->next=NULL;
+    }
+};
+inline void printList(Node* head){
+
+    while(head!=NULL){
+        printf("%d-->", head->val);
+        head=head->next;
+    }
+    printf("NULL\n");
+}
 
 int main(int argc, char const *argv[])
 {
-   ll a;
-   cin>>a;
-   int count=0;
-   while(a/10!=0){
-     if(a%10==0){
-        count+=1;
-     }
-     a/=10;
-   }
-   printf("%d\n", count);
+     Node* head=(Node*)malloc(sizeof(Node));
+     Node* second=(Node*)malloc(sizeof(Node));
+     Node* third=(Node*)malloc(sizeof(Node));
+     
+     head->val=1;
+     head->next=second;
+     second->val=2;
+     second->next=third;
+     third->val=3;
+     printList(head);
 }

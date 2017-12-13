@@ -1,6 +1,7 @@
 ## Programming in Java
 ### Recording Personal life's Coding in Algorithms , Data Structures , etc about programming.
-$$\sum\nolimits_{k=1}^n$$
+<img src="http://latex.codecogs.com/gif.latex?\frac{\partial J}{\partial \theta_k^{(j)}}=\sum_{i:r(i,j)=1}{\big((\theta^{(j)})^Tx^{(i)}-y^{(i,j)}\big)x_k^{(i)}}+\lambda \theta_k^{(j)}" />
+
 ``` C++
    #include<bits/stdc++.h>
    using namespace std;

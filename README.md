@@ -1,4 +1,4 @@
-# Programming in Java
+# Programming
 ## Recording Personal life's Coding in Algorithms , Data Structures , etc about programming.
 ### This is My First Efficient Algorithm i get by study on mine own.
 ``` C++

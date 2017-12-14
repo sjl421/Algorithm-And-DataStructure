@@ -1,7 +1,8 @@
 ﻿package com.DataStructures.List.LinkedList;
 
 /**
- * @author littledream1502@gmail.com
+ * @author 张勇
+ * @email  littledream1502@gmail
  * @date 2017/11/26
  * @desc 单向链表;
  */

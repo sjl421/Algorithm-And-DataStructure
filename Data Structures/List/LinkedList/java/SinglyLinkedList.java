@@ -2,7 +2,7 @@
 
 /**
  * @author 张勇
- * @email  littledream1502@gmail
+ * @email  littledream1502@gmail.com
  * @date 2017/11/26
  * @desc 单向链表;
  */

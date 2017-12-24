@@ -1,10 +1,8 @@
-﻿package com.DataStructures.List.LinkedList;
-
 /**
- * @author 张勇
  * @email  littledream1502@gmail.com
  * @date 2017/11/26
- * @desc 单向链表;
+ * @desc SinglyLinkedList
+ * 单向链表;
  */
 public class SinglyLinkedList {
 

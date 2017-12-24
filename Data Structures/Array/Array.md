@@ -1,5 +1,8 @@
 # Array 数组
-
+### What Is It
+#### 数组:在内存中呈现出来的是 连续的片段;
+### How To Use It
+#### 数组常见方法
 ## 1.声明数组
 ```java
    class Main{

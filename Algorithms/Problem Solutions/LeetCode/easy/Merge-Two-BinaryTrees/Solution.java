@@ -3,7 +3,7 @@ package com.leetcode.easy.MergeTwoBinaryTrees;
 import java.net.Socket;
 
 /**
- * @author zhangyong@shopin.cn
+ * @author zhangyong
  * @date 2017/11/7
  * @desc
  * @url https://leetcode.com/problems/merge-two-binary-trees/description/

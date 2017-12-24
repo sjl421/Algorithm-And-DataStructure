@@ -1,10 +1,13 @@
+<<<<<<< HEAD
 package com.DataStructures.List.LinkedList;
 
+=======
+>>>>>>> 5768670fe7faaa1a913c924f6b1d2a6405d2902e
 /**
- * @author 张勇
- * @email  littledream1502@gmail
+ * @email  littledream1502@gmail.com
  * @date 2017/11/26
- * @desc 单向链表;
+ * @desc SinglyLinkedList
+ * 单向链表;
  */
 public class SinglyLinkedList {
 

@@ -1,4 +1,4 @@
-﻿package com.DataStructures.List.LinkedList;
+package com.DataStructures.List.LinkedList;
 
 /**
  * @author 张勇
@@ -212,6 +212,7 @@ public class SinglyLinkedList {
         NodeForSinglyLinkedList pre = null;
         NodeForSinglyLinkedList current = head;
         NodeForSinglyLinkedList next = null;
+        
         while (current != null) {
 
             /**

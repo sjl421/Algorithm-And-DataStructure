@@ -1,5 +1,3 @@
-package com.zhangyong.Algorithm.Temp;
-
 import java.util.Scanner;
 
 /**

@@ -1,9 +1,4 @@
-<<<<<<< HEAD
-package com.DataStructures.List.LinkedList;
-
-=======
->>>>>>> 5768670fe7faaa1a913c924f6b1d2a6405d2902e
-/**
+﻿/**
  * @email  littledream1502@gmail.com
  * @date 2017/11/26
  * @desc SinglyLinkedList
@@ -243,7 +238,18 @@ public class SinglyLinkedList {
         head = pre;
         return head;
     }
-    
+   
+    /**
+     * Merge two sorted linked lists
+     * 合并两个有序链表;
+     * @param a
+     * @param b
+     * @return
+     */
+    public static NodeForSinglyLinkedList SortedMerge(NodeForSinglyLinkedList a, NodeForSinglyLinkedList b) {
+
+        return null;
+    } 
      /**
      * 判断一个链表是否存在环;
      *
@@ -316,6 +322,46 @@ public class SinglyLinkedList {
             deleteByIndex(y);
             insertAfterIndex(y - 1, val);
         }
+    }
+ /**
+     * 打印链表中间节点
+     *
+     * @param head
+     */
+    public void printMiddleNode(NodeForSinglyLinkedList head) {
+        NodeForSinglyLinkedList first = head;
+        NodeForSinglyLinkedList second = head;
+        if (head == null) {
+            return;
+        }
+        while (first != null && second.next != null) {
+            second = second.next.next;
+            first = first.next;
+        }
+        System.out.println(first.val);
+    }
+
+    /**
+     * n’th node from the end of a Linked List
+     * 返回 倒数第K个节点
+     * 要求不改变原链表结构
+     *
+     * @param head
+     * @param k
+     * @return NodeForSinglyLinkedList
+     */
+    public static NodeForSinglyLinkedList printNthFromLast(NodeForSinglyLinkedList head, int k) {
+        NodeForSinglyLinkedList first = head;
+        NodeForSinglyLinkedList second = head;
+
+        for (int i = 0; i < k; i++) {
+            second = second.next;
+        }
+        while (first != null && second != null) {
+            first = first.next;
+            second = second.next;
+        }
+        return first;
     }
 
 

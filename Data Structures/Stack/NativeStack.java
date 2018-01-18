@@ -1,5 +1,3 @@
-package com.zhangyong.DataStructures.Stack;
-
 /**
  * @author littledream1502@gmail.com
  * @date 2018/1/16

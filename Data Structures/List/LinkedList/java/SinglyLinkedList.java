@@ -184,44 +184,6 @@ public class SinglyLinkedList {
      * @understanding 我们把node.next理解为节点前后关系的改变;
      * 而node[1]=node[2] 理解为node节点位置的改变;
      *
-     *
-     * -----------------------------------------[I]
-    1----->3----->2----->4
-    ^      ^
-    current  next
-    -------------------------------------------[II]
-    null<-----1      3----->2----->4
-    ^        ^      ^
-    pre    current  next
-    -----------------------------------------[III]
-    null<-----1      3----->2----->4
-    ^      ^
-    pre  current
-    ^
-    next
-    -----------------------------------------[IV]
-    null<-----1      3----->2----->4
-    ^      ^      ^
-    pre  current  next
-    -----------------------------------------[IV]
-    null<-----1<-----3      2----->4
-    ^      ^      ^
-    pre  current  next
-    -----------------------------------------[V]
-    null<-----1<-----3      2----->4
-    ^      ^      ^
-    pre  current  next
-    -----------------------------------------[VI]
-    null<-----1<-----3      2----->4
-    ^      ^      ^
-    pre  current
-    ^
-    next
-    -----------------------------------------[VII]
-    null<-----1<-----3      2----->4
-    ^      ^      ^
-    pre  current  next
-
      */
     public static NodeForSinglyLinkedList reverseLinkedList(NodeForSinglyLinkedList head) {
 

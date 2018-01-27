@@ -1,8 +1,7 @@
 ﻿/**
- * @email  littledream1502@gmail.com
+ * @author littledream1502@gmail.com
  * @date 2017/11/26
- * @desc SinglyLinkedList
- * 单向链表;
+ * @desc 单向链表;
  */
 public class SinglyLinkedList {
 
@@ -18,6 +17,7 @@ public class SinglyLinkedList {
      * @desc add a new node at the front the linkedlist;
      * @complexity:O(1)
      */
+
     public static void lpush(int data) {
         NodeForSinglyLinkedList node = new NodeForSinglyLinkedList(data);
         node.next = head;
@@ -50,6 +50,15 @@ public class SinglyLinkedList {
     }
 
     /**
+     * @desc 链表左端取出一个节点, 并删除;
+     * @after wait to gc the pre node be deleted;
+     */
+    public static void lpop() {
+        // help gc
+        head = head.next;
+    }
+
+    /**
      * @desc 链表右端取出一个节点, 并删除;
      */
     public static void rpop() {
@@ -61,13 +70,6 @@ public class SinglyLinkedList {
         now.next = null;
     }
 
-    /**
-     * @desc 链表左端取出一个节点, 并删除;
-     * @after wait to gc the pre node been deleted;
-     */
-    public static void lpop() {
-        head = head.next;
-    }
 
     /**
      * 根据下标获取节点值;
@@ -107,6 +109,7 @@ public class SinglyLinkedList {
      * 1->3->4
      */
     public static void deleteByIndex(int index) {
+
         if (index < 0 || index > getNodeCount()) {
             return;
         }
@@ -131,15 +134,29 @@ public class SinglyLinkedList {
      * @param index
      * @param data
      * @complexity O(n)
+     * @desc index
      */
     public static void insertAfterIndex(int index, int data) {
 
-        if (index < 1 || head == null || index > getNodeCount()) {
+        if (head == null) {
+            head = new NodeForSinglyLinkedList(data);
+            return;
+        } else if (index < 0) {
+            lpush(data);
+            return;
+        } else if (index > getNodeCount()) {
+            rpush(data);
             return;
         }
+
         //0->1->2->4
         NodeForSinglyLinkedList node = new NodeForSinglyLinkedList(data);
         NodeForSinglyLinkedList now = head;
+
+        if (index == 0) {
+            lpush(data);
+            return;
+        }
         //找到特定位置的那个节点
         for (int i = 0; now != null && i < index - 1; i++) {
             now = now.next;
@@ -153,6 +170,7 @@ public class SinglyLinkedList {
      * @desc 按链表顺序打印链表元素;
      */
     public static void printList(NodeForSinglyLinkedList head) {
+
         NodeForSinglyLinkedList node = head;
         while (node != null) {
             System.out.println(node.val + " ");
@@ -168,55 +186,55 @@ public class SinglyLinkedList {
      *
      *
      * -----------------------------------------[I]
-               1----->3----->2----->4
-               ^      ^
-            current  next
-      -------------------------------------------[II]
-     null<-----1      3----->2----->4
-      ^        ^      ^
-     pre    current  next
+    1----->3----->2----->4
+    ^      ^
+    current  next
+    -------------------------------------------[II]
+    null<-----1      3----->2----->4
+    ^        ^      ^
+    pre    current  next
     -----------------------------------------[III]
     null<-----1      3----->2----->4
-              ^      ^
-             pre  current
-                     ^
-                    next
+    ^      ^
+    pre  current
+    ^
+    next
     -----------------------------------------[IV]
     null<-----1      3----->2----->4
-              ^      ^      ^
-             pre  current  next
+    ^      ^      ^
+    pre  current  next
     -----------------------------------------[IV]
     null<-----1<-----3      2----->4
-              ^      ^      ^
-             pre  current  next     
+    ^      ^      ^
+    pre  current  next
     -----------------------------------------[V]
     null<-----1<-----3      2----->4
-              ^      ^      ^
-             pre  current  next    
+    ^      ^      ^
+    pre  current  next
     -----------------------------------------[VI]
     null<-----1<-----3      2----->4
-                     ^      ^      ^
-                    pre  current
-                            ^  
-                           next
+    ^      ^      ^
+    pre  current
+    ^
+    next
     -----------------------------------------[VII]
     null<-----1<-----3      2----->4
-                     ^      ^      ^
-                    pre  current  next
-                            
-                       
+    ^      ^      ^
+    pre  current  next
+
      */
     public static NodeForSinglyLinkedList reverseLinkedList(NodeForSinglyLinkedList head) {
+
         NodeForSinglyLinkedList pre = null;
         NodeForSinglyLinkedList current = head;
         NodeForSinglyLinkedList next = null;
-        
         while (current != null) {
 
             /**
              *  保证链表后续元素不丢失;
              *  如过程[I]所示;
              */
+
             next = current.next;
             /**
              * 逐一改变链表之间指向关系;
@@ -238,19 +256,8 @@ public class SinglyLinkedList {
         head = pre;
         return head;
     }
-   
-    /**
-     * Merge two sorted linked lists
-     * 合并两个有序链表;
-     * @param a
-     * @param b
-     * @return
-     */
-    public static NodeForSinglyLinkedList SortedMerge(NodeForSinglyLinkedList a, NodeForSinglyLinkedList b) {
 
-        return null;
-    } 
-     /**
+    /**
      * 判断一个链表是否存在环;
      *
      * @param head
@@ -264,22 +271,29 @@ public class SinglyLinkedList {
         while (first != null && first.next != null) {
             first = first.next.next;
             slow = slow.next;
-            if (first == slow) return true;
+            if (first == slow) {
+                return true;
+            }
         }
         return false;
     }
 
-     /**
+    /**
      * 若一个链表有环,计算环的长度;
      * 知识链接: https://www.cnblogs.com/fankongkong/p/7007869.html
+     * TODO 有待完善
+     *
      * @param head
      * @return
      * @desc --------------------------------------------------------------------------------
      */
     public static int getLoopLength(NodeForSinglyLinkedList head) {
+
         int count = 0;
         NodeForSinglyLinkedList first = head, slow = head;
+
         while (first != null && first.next != null) {
+
             first = first.next.next;
             slow = slow.next;
             count += 1;
@@ -290,9 +304,32 @@ public class SinglyLinkedList {
         return count;
     }
 
+    /**
+     * 合并两个有序链表;
+     *
+     * @param a
+     * @param b
+     * @return
+     * @desc 思路分析:
+     * TODO
+     * 1-->3-->5
+     * 1-->2--3-->4--6
+     * <p>
+     * 1-->1-->2-->3-->3-->4-->5-->6
+     */
+    NodeForSinglyLinkedList SortedMerge(NodeForSinglyLinkedList a, NodeForSinglyLinkedList b) {
+
+        NodeForSinglyLinkedList dummy = null;
+        NodeForSinglyLinkedList tail = dummy;
+
+
+        dummy.next = null;
+        return new NodeForSinglyLinkedList();
+    }
 
     /**
-     * 根据节点位置交换位置
+     * 交换两个节点位置
+     * <p>
      * 1->5->3->2
      * ---------
      * 第二个和第四个换位置
@@ -323,46 +360,6 @@ public class SinglyLinkedList {
             insertAfterIndex(y - 1, val);
         }
     }
- /**
-     * 打印链表中间节点
-     *
-     * @param head
-     */
-    public void printMiddleNode(NodeForSinglyLinkedList head) {
-        NodeForSinglyLinkedList first = head;
-        NodeForSinglyLinkedList second = head;
-        if (head == null) {
-            return;
-        }
-        while (first != null && second.next != null) {
-            second = second.next.next;
-            first = first.next;
-        }
-        System.out.println(first.val);
-    }
-
-    /**
-     * n’th node from the end of a Linked List
-     * 返回 倒数第K个节点
-     * 要求不改变原链表结构
-     *
-     * @param head
-     * @param k
-     * @return NodeForSinglyLinkedList
-     */
-    public static NodeForSinglyLinkedList printNthFromLast(NodeForSinglyLinkedList head, int k) {
-        NodeForSinglyLinkedList first = head;
-        NodeForSinglyLinkedList second = head;
-
-        for (int i = 0; i < k; i++) {
-            second = second.next;
-        }
-        while (first != null && second != null) {
-            first = first.next;
-            second = second.next;
-        }
-        return first;
-    }
 
 
     /**
@@ -383,24 +380,15 @@ public class SinglyLinkedList {
     }
 
     /**
+     * 主函数
+     *
      * @param args
      */
     public static void main(String[] args) {
-        SinglyLinkedList list = new SinglyLinkedList();
-        list.rpush(1);
-        list.rpush(2);
-        list.rpush(3);
-        list.rpush(4);
-        list.rpush(5);
-        list.rpush(6);
-        list.rpush(7);
-        list.rpush(8);
-        /* deleteByIndex(1);
-        insertAfterIndex(1, 3);
-        deleteByIndex(3);
-        insertAfterIndex(2, 1);*/
-        //swapNodesFromIndex(2, 3);
-        printList(reverseLinkedList(head));
-        System.out.println("链表个数为:" + list.getNodeCount());
+        head = new NodeForSinglyLinkedList(1);
+        head.next = new NodeForSinglyLinkedList(3);
+        head.next.next = new NodeForSinglyLinkedList(4);
+        insertAfterIndex(1, 5);
+        printList(head);
     }
 }

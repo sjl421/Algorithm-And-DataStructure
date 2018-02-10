@@ -280,13 +280,18 @@ public class SinglyLinkedList {
      * 1-->1-->2-->3-->3-->4-->5-->6
      */
     NodeForSinglyLinkedList SortedMerge(NodeForSinglyLinkedList a, NodeForSinglyLinkedList b) {
-
-        NodeForSinglyLinkedList dummy = null;
-        NodeForSinglyLinkedList tail = dummy;
-
-
-        dummy.next = null;
-        return new NodeForSinglyLinkedList();
+    	
+       if (a == null) {
+            return b;
+        } else if (b == null) {
+            return a;
+        } else if (a.val <= b.val) {
+            a.next = SortedMerge(a.next, b);
+            return a;
+        } else {
+            b.next = SortedMerge(a, b.next);
+            return b;
+        }
     }
 
     /**

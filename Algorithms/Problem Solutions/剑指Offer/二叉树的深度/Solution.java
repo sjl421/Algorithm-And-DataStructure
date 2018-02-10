@@ -1,11 +1,8 @@
-package com.zhangyong.Solution;
-
 /**
  * @author littledream1502@gmail.com
  * @date 2018/2/10
  * @desc 求二叉树深度
  */
-
 public class Solution {
 
     public int TreeDepth(TreeNode root) {

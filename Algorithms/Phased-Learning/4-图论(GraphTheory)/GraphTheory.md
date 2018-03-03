@@ -3,7 +3,7 @@
   - [基本概念](#基本概念)
     - [顶点](#顶点)
     - [边](#边)
-    - [同构](#同构(Isomorphism))
+    - [同构(Isomorphism)](#同构(Isomorphism))
     - [有向图/无向图(Directed Graph/Undirected Graph)](#有向图/无向图(Directed-Graph/Undirected-Graph))
     - [权重](#权重)
     - [路径/(最短路径)](#路径/(最短路径))

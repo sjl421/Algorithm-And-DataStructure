@@ -5,6 +5,8 @@
     - [1.2 边](#边)
     - [1.3 同构](#同构(Isomorphism))
     - [1.4 有向图/无向图(Directed Graph/Undirected Graph)](#有向图/无向图(Directed Graph/Undirected Graph))
+    - [1.5 权重](#1.5权重)
+    - [1.6](#1.6路径/(最短路径))
 # 图论大纲
 ## 1.基本概念
 ### 1.1 顶点

@@ -1,10 +1,10 @@
 #### Table of contents
 - [图论大纲](#图论大纲)
-  - [1.基本概念](#基本概念)
-    - [1.1 顶点](#顶点)
-    - [1.2 边](#边)
-    - [1.3 同构](#同构)
-    - [1.4 有向图/无向图(Directed Graph/Undirected Graph)](#有向图/无向图(Directed Graph/Undirected Graph))
+  - [1.基本概念](#1.基本概念)
+    - [1.1 顶点](#1.1 顶点)
+    - [1.2 边](#1.2 边)
+    - [1.3 同构](#1.3 同构(Isomorphism))
+    - [1.4 有向图/无向图(Directed Graph/Undirected Graph)](1.4 有向图/无向图(Directed Graph/Undirected Graph))
 # 图论大纲
 ## 1.基本概念
 ### 1.1 顶点

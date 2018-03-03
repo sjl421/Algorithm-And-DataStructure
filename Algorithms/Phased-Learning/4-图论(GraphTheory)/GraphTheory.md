@@ -1,18 +1,18 @@
 #### Table of contents
 - [图论大纲](#图论大纲)
-  - [1.基本概念](#1.基本概念)
-    - [1.1-顶点](#1.1-顶点)
-    - [1.2-边](#1.2-边)
-    - [1.3-同构](#1.3-同构(Isomorphism))
-    - [1.4-有向图/无向图(Directed Graph/Undirected Graph)](#1.4-有向图/无向图(Directed-Graph/Undirected-Graph))
-    - [1.5-权重](#1.5-权重)
-    - [1.6-路径/(最短路径)](#1.6-路径/(最短路径))
+  - [基本概念](#基本概念)
+    - [顶点](#顶点)
+    - [边](#边)
+    - [同构](#同构(Isomorphism))
+    - [有向图/无向图(Directed Graph/Undirected Graph)](#有向图/无向图(Directed-Graph/Undirected-Graph))
+    - [权重](#权重)
+    - [路径/(最短路径)](#路径/(最短路径))
 # 图论大纲
-## 1.基本概念
-### 1.1-顶点
+## 基本概念
+### 顶点
 
-### 1.2-边
-### 1.3-同构(Isomorphism)
+### 边
+### 同构(Isomorphism)
 ```
   先看如下两张图:
 ```
@@ -21,17 +21,17 @@
 ```
    首先你的感觉是这2个图肯定不一样。但从图（graph）的角度出发，这2个图是一样的，即它们是同构的。前面提到顶点和边指的是事物和事物的逻辑关系，不管顶点的位置在哪，边的粗细长短如何，只要不改变顶点代表的事物本身，不改变顶点之间的逻辑关系，那么就代表这些图拥有相同的信息，是同一个图。同构的图区别仅在于画法不同。
 ```
-### 1.4 有向图/无向图(Directed Graph/Undirected Graph)
+### 有向图/无向图(Directed Graph/Undirected Graph)
 ![](http://img.blog.csdn.net/20170114203919888?watermark/2/text/aHR0cDovL2Jsb2cuY3Nkbi5uZXQvc2FsdHJpdmVy/font/5a6L5L2T/fontsize/400/fill/I0JBQkFCMA==/dissolve/70/gravity/SouthEast)
 ```
    两者唯一的区别在于，有向图中的边是有方向性的;
 ```
-### 1.5 权重
+### 权重
 ![](http://img.blog.csdn.net/20170114204047047?watermark/2/text/aHR0cDovL2Jsb2cuY3Nkbi5uZXQvc2FsdHJpdmVy/font/5a6L5L2T/fontsize/400/fill/I0JBQkFCMA==/dissolve/70/gravity/SouthEast)
 ```
   边的权重(或者称为权值,长度或者开销),这是一个非常核心的概念,即每条边都有与之对应的值.
 ```
-### 1.6 路径/(最短路径)
+### 路径/(最短路径)
 ```
   在A到B有多种方案可行时,由于每条边的权值不同,选择最短路径由此而来;
 ```

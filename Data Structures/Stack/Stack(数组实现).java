@@ -1,24 +1,5 @@
-<!-- GFM-TOC -->
-* [Stack 介绍](#stack-介绍)
-    * [1. Stack简介](#1-stack简介)
-    * [2.实现方式](#2实现方式)
-        * [2.1 用数组实现](#21-用数组实现)
-        * [2.2 用链表实现](#22-用链表实现)
-<!-- GFM-TOC -->
+package com.zhangyong.DataStructures.Stack;
 
-# Stack 介绍
-## 1. Stack简介
-```
-   Stack是一种具有先进后出的数据结构,大致长下面的样子;
-```
-![](https://mmbiz.qpic.cn/mmbiz_jpg/6fuT3emWI5LkeM7Tv8xW0tnI4yibWAOicgTYfab3IIOK5ibgOWZCibYQAn7Ix1bSichic1zaxAaIegoibojyfs343F4KQ/640?tp=webp&wxfrom=5&wx_lazy=1)
-## 2.实现方式
-```
-  JDK中Stack的实现继承与Vector,原理上是以数组实现,
-  我们在此不谈论JDK怎么实现的,我们接下来分别以数组和链表来实现Stack;
-```
-### 2.1 用数组实现
-```
 import java.util.Iterator;
 import java.util.NoSuchElementException;
 
@@ -151,9 +132,15 @@ public class Stack<T> implements Iterable<T> {
          */
         return new ReverseArrayIterator();
     }
+
+    public static void main(String[] args) {
+        Stack<String> stack = new Stack<>();
+        for (int i = 0; i < 4; i++) {
+            stack.push("Do You Love " + i);
+        }
+        System.out.println(stack.peek());
+        System.out.println(stack.size());
+        System.out.println(stack.pop());
+        System.out.println(stack.size());
+    }
 }
-```
-### 2.2 用链表实现
-```
-   
-```

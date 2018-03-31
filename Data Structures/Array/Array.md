@@ -1,9 +1,9 @@
 # Array 数组
-### What Is It
-#### 数组:在内存中呈现出来的是 连续的片段;
-### How To Use It
-#### 数组常见方法
-## 1.声明数组
+## Array简介
+### 数组:在内存中呈现出来的是 连续的片段;
+
+## 数组常见方法
+### 1.声明数组
 ```java
    class Main{
      public static void main(String[] args){
@@ -14,7 +14,7 @@
      }
    }
 ```
-## 2.初始化数组
+### 2.初始化数组
 ```java
    class Main{
      public static void main(String[] args){
@@ -29,7 +29,7 @@
      }
    }
 ```
-## 3.查看数组长度
+### 3.查看数组长度
 ```java
    class Main{
     public static void main(String[] args){
@@ -42,7 +42,7 @@
     }
    }
 ```
-## 4.int数组转成 String数组
+### 4.int数组转成 String数组
 ```java
    import java.util.Arrays;
    class Main{
@@ -55,7 +55,7 @@
      }
    }
 ```
-## 5.从 array转化为 ArrayList
+### 5.从 array转化为 ArrayList
 ```java
    import java.util.Arrays;
    public class Main {
@@ -73,7 +73,7 @@
    }
 ```
 
-## 6. Arrays.fill()填充数组
+### 6. Arrays.fill()填充数组
 ```java
    import java.util.Arrays;
    public class Main {

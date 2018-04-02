@@ -1,5 +1,3 @@
-package com.zhangyong.Algorithm.Sort;
-
 /**
  * @author littledream1502@gmail.com
  * @date 2017/12/20
@@ -19,9 +17,5 @@ public class BubbleSort {
             }
         }
         return arr;
-    }
-
-    public static void main(String[] args) {
-
-    }
+    } 
 }

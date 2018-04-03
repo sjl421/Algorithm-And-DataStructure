@@ -1,5 +1,3 @@
-package com.zhangyong.DataStructures.Stack;
-
 import java.util.Iterator;
 import java.util.NoSuchElementException;
 

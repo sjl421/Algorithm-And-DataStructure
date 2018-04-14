@@ -6,7 +6,7 @@
  - [链表](https://github.com/553899811/Programming/tree/master/Data%20Structures/List)
    - [单向链表](https://github.com/553899811/Programming/blob/master/Data%20Structures/List/LinkedList/java/%E5%9F%BA%E7%A1%80%E7%9F%A5%E8%AF%86/SinglyLinkedList.java)
    - [双向链表](https://github.com/553899811/Programming/blob/master/Data%20Structures/List/LinkedList/java/%E5%9F%BA%E7%A1%80%E7%9F%A5%E8%AF%86/TwoWayLinkedList.java)
- - [栈](https://github.com/553899811/Programming/tree/master/Data%20Structures/Stack)
+ - [栈](https://github.com/553899811/Programming/blob/master/Data%20Structures/Stack/Stack.md)
  - [队列]()
    - [优先队列]() 
  - [树]()

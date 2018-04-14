@@ -17,4 +17,12 @@ public class NodeForTwoWayLinkedList {
         this.pre = null;
         this.next = null;
     }
+
+    @Override
+    public String toString() {
+        return "NodeForTwoWayLinkedList{" +
+                "val=" + val +
+                ", next=" + next +
+                '}';
+    }
 }

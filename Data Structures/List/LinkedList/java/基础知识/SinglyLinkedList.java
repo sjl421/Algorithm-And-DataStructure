@@ -49,25 +49,28 @@ public class SinglyLinkedList {
         return;
     }
 
-    /**
+   /**
      * @desc 链表左端取出一个节点, 并删除;
      * @after wait to gc the pre node be deleted;
      */
-    public static void lpop() {
+    public static NodeForSinglyLinkedList lpop() {
+        NodeForSinglyLinkedList node = new NodeForSinglyLinkedList(head.val);
         // help gc
         head = head.next;
+        return node;
     }
 
-    /**
+      /**
      * @desc 链表右端取出一个节点, 并删除;
      */
-    public static void rpop() {
+    public static NodeForSinglyLinkedList rpop() {
         NodeForSinglyLinkedList now = head;
         int length = getNodeCount();
-        for (int i = 0; i < length - 2; i++) {
+        for (int i = 0; i < length - 1; i++) {
             now = now.next;
         }
-        now.next = null;
+        NodeForSinglyLinkedList temp = now;
+        return temp;
     }
 
 

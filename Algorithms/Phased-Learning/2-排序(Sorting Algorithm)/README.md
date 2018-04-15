@@ -6,7 +6,7 @@
    - [简单选择排序]()
    - [堆排序]()
  - 交换排序
-   - [冒泡排序]()
-   - [快速排序](https://github.com/553899811/Programming/blob/master/Algorithms/Phased-Learning/2-%E6%8E%92%E5%BA%8F(Sorting%20Algorithm)/Quick%20Sort/QuickSort.md)
+   - [冒泡排序](https://github.com/553899811/Programming/tree/master/Algorithms/Phased-Learning/2-%E6%8E%92%E5%BA%8F(Sorting%20Algorithm)/Bubble%20Sort)
+   - [快速排序](https://github.com/553899811/Programming/blob/master/Algorithms/Phased-Learning/2-%E6%8E%92%E5%BA%8F(Sorting%20Algorithm)/Quick%20Sort/README.md)
  - [归并排序]()
  - [基数排序]()

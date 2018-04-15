@@ -49,4 +49,4 @@ public class BubbleSort {
   O(n^2)
 ```
 ## 3. 原理分析
-![](https://images2015.cnblogs.com/blog/1024555/201611/1024555-20161126001352300-2027386210.png)
+![](https://github.com/553899811/Programming/blob/master/Algorithms/Phased-Learning/2-%E6%8E%92%E5%BA%8F(Sorting%20Algorithm)/Bubble%20Sort/img/bubbleSort.png)
